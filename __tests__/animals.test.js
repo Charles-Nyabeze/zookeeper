@@ -7,7 +7,7 @@ const {
   validateAnimal,
 } = require("../lib/animals.js");
 const { animals } = require("../data/animals");
-
+jest.mock('fs')
 test("creates an animal object", () => {
   const animal = createNewAnimal(
     { name: "Jake", id: "323" },
